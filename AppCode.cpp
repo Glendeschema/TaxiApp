@@ -15,7 +15,7 @@ using namespace std ;
 
        cout<<"welcome " + name <<endl;
         
-        cout << "Enter total & seated number of passangers";
+        cout << "Enter total & seated number of passangers :";
         cin >>total >> seated ;
         
          int tot = total - seated ;
@@ -41,17 +41,19 @@ using namespace std ;
          float fare ;
          float change ;
          
-       
-
+        
          do {
          cout << "Enter number of people and fare received " <<endl ;
          cin >> noofpeople>> fare ;
-         
          change = fare - (noofpeople * amount) ;
          cout << "Give them "<<"R " <<change << " change " <<endl;
          }
          while(change <=0);
-           
+
+         int total1 = seated - noofpeople ;
+        cout << "No of unpaid passangers: " << total1 <<endl;
+
+        seated = total1 ;
          i++ ;
          
          }
